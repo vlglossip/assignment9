@@ -1,0 +1,356 @@
+/* RESUME PAGE ----------------------------------------------------------------------------------------------------------------------------------------------- */
+
+header::after{
+    background: url("../images/background-computer1.jpg");
+    content: "";
+    height: 300px;
+    display: block;
+    width: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.content-wrap {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 1150px;
+    flex: 1 0 auto;
+}
+
+body {
+    background-color: #FAF9F6;
+    color: #01353C;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+img {
+    width: 80%;
+    height: auto;
+}
+
+h1 {
+    font-size: 5rem;
+    text-shadow: 4px 4px 4px #aaa;
+    line-height: 0.9;
+}
+
+h1, h2, h3 {
+    font-family: "Playwrite AU NSW", cursive; 
+    font-weight: 400;
+    margin: 1;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+p {
+    text-align: center;
+}
+
+/* NAVIGATION ----------------------------------------------------------------------------------------------------------------------------------------------*/
+nav {
+    text-align: right;
+    list-style: none;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    position: relative;
+    padding: 20px;
+    background: pink;
+    cursor: pointer;
+
+}
+
+nav ul li:hover {
+    background: lightpink;
+    color: white;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li ul li {
+    display: block;
+    background: pink;
+    color: black;
+    text-align: center;
+}
+
+nav ul li ul li:hover {
+    background: lightpink;
+    color: white;
+}
+
+nav ul li:hover ul {
+    display: block;
+    left: 0;
+}
+
+/* LINKS ----------------------------------------------------------------------------------------------------------------------------------------------------*/
+a {
+    color: #3E7A56;
+}
+
+a:hover {
+    color: #44885F;
+    
+}
+
+/* ABOUT -----------------------------------------------------------------------------------------------------------------------------------------------------*/
+header {
+    text-align: center;
+    position: relative;
+}
+
+header p {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+/* PROJECTS --------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.project {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+}
+
+.project-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: pink;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 7px;
+    letter-spacing: .05em;
+    line-height: 1;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: white;
+    background-color: lightpink;
+}
+/* WORK EXPERIENCE -------------------------------------------------------------------------------------------------------------------------------------------*/
+.work {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 40px;
+    padding: 20px;
+    padding-bottom: 40px;  
+    margin: 0 auto;
+}
+
+.work-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/* EDUCATION -------------------------------------------------------------------------------------------------------------------------------------------------*/
+.edu-item {
+    text-align: center;
+    margin-right: 300px;
+    margin-left: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+/* FOOTER ----------------------------------------------------------------------------------------------------------------------------------------------------*/
+footer h2 {
+    text-align: left;
+}
+
+footer {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+footer a {
+    background-color: pink;
+}
+
+.socials {
+    list-style-type: none;
+    padding: 0;
+}
+
+.socials img {
+    width: 32px;
+    height: 32px;
+}
+
+.socials img:hover {
+    opacity: 0.5;
+}
+
+.socials li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* MEDIA QUERY ---------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width: 975px) {
+    header {
+        text-align: center;
+    }
+    
+    .edu-item {
+        text-align: center;
+        margin: 0 20px; 
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    nav {
+        text-align: center;
+    }
+
+    nav ul li {
+        padding: 10px;
+        font-size: 1rem;
+        display: inline-flex;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+    
+    nav ul li ul li {
+        opacity: 0.7;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body {
+        text-align: center;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
+    header p {
+        margin: 0 50px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .edu-item {
+        text-align: center;
+        margin: 0 20px; 
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    h3 {
+        font-size: 1.25rem; 
+    }
+    
+    nav {
+        text-align: center;
+    } 
+    
+    nav ul li {
+        padding: 5px;
+        font-size: 0.8rem;
+        display: inline-block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+    }
+
+    nav ul li ul li {
+        opacity: 70%;
+    }
+
+    .project, .work {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }    
+}
